@@ -20,10 +20,12 @@
   },
   "homepage": "https://github.com/F0rL/koa2-learning#readme",
   "dependencies": {
+    "ip": "^1.1.5",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-nunjucks-2": "^3.0.2",
     "koa-router": "^7.4.0",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "log4js": "^4.3.1"
   }
 }
