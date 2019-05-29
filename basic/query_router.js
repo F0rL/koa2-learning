@@ -1,5 +1,6 @@
 const Koa = require('koa')
 const Router = require('koa-router')
+//引入，处理post
 const bodyParser= require('koa-bodyparser')
 
 const app = new Koa()
