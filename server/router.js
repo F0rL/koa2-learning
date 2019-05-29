@@ -13,4 +13,5 @@ module.exports = (app) => {
   
   app.use(router.routes())
     .use(router.allowedMethods())
+  //.allowedMethods处理的业务是当所有路由中间件执行完成之后,若ctx.status为空或者404的时候,丰富response对象的header头.
 }
