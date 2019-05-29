@@ -9,8 +9,9 @@ router.get('/', async (ctx, next) => {
   ctx.response.body = '<h1>router user page</h1>'
 })
 
-router.get('user', '/:id', async (ctx, next) => {
-    ctx.response.body = '<h1>router user page "/users/:id"</h1>'
+router.get('user', '/:id/:name', async (ctx, next) => {
+    ctx.response.body = '<h1>router user page "/users/:id/:name"</h1>'
+    console.log(ctx.params)
 })
 
 router.all('/*', async (ctx, next) => {
