@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <h1>欢迎登录界面</h1>
-  <form action="/user/register" method="post">
-    <input name="name" type="text" placeholder="请输入用户名：kuma"/> 
-    <br/>
-    <input name="password" type="text" placeholder="请输入密码：123456"/>
-    <br/> 
-    <button>{{btnName}}</button>
-  </form>
-</body>
-</html>
+{% extends "common/layout-home.html" %} 
+{% block homeBanner %}
+<div class="banner_box">
+    <div class="banner_inner">
+        <h2 class="slogan">学无止境</h2>
+        <p class="des">wen前端<br>node后端</p>
+        <a href="/login" title="gogogo" class="btn" id="gogogo">进入战场</a>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="hp-dialog">
+  <div class="hp-box">
+    <form action="/user/register" method="post">
+      <h1>到达战场</h1>
+      <p class="error">{{content}}</p>
+      <input type="text" name="name" placeholder="请输入用户名：kuma">
+      <input type="password" name="password" placeholder="请输入密码：123456">
+      <button>GoGoGo</button>
+    </form>
+  </div>
+</div>
+<div class="hp-overlay"></div>
+{% endblock %}
