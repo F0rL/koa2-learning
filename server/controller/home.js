@@ -14,6 +14,9 @@ module.exports = {
     console.log(ctx.params);
     ctx.response.body = "<h1>HOME page /:id/:name</h1>";
   },
+  welcome: async (ctx, next) => {
+    ctx.response.body = "<h1>Welcome page</h1>";
+  },
   login: async (ctx, next) => {
     await ctx.render('home/login', {
       btnName: 'GoGoGo'

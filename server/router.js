@@ -8,6 +8,8 @@ module.exports = (app) => {
   router.get('/home/:id/:name', HomeController.homeParams)
   
   router.get('/user', HomeController.login)
+
+  router.get('/welcome', HomeController.welcome)
   
   router.post('/user/register', HomeController.register)
   
